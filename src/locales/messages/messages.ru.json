@@ -52,8 +52,12 @@
   "createProject.label.name": "Название",
   "createProject.title": "Создать проект",
 
-  "calendar.createEvent.title": "Добавить событие",
-  "calendar.createEvent.label.name": "Название",
-  "calendar.createEvent.label.time": "Время",
-  "calendar.event.label.date": "Дата"
+  "deleteTask.title": "Удалить задачу?",
+
+  "calendar.createEvent.modal.title": "Добавить событие",
+  "calendar.label.name": "Название",
+  "calendar.label.time": "Время",
+  "calendar.label.date": "Дата",
+  "calendar.event.label.date": "Дата",
+  "calendar.update.modal.title": "Изменить событие"
 }

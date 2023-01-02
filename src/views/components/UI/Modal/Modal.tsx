@@ -24,7 +24,13 @@ const Modal: FC<PropsWithChildren<IProps>> = ({
 }) => {
   return createPortal(
     <CSSTransition timeout={80} in={isOpen} classNames={{ enterDone: st.entered }} mountOnEnter unmountOnExit>
-      <div className={st.overlay} onClick={onClose}>
+      <div
+        className={st.overlay}
+        onClick={(e) => {
+          onClose();
+          e.stopPropagation();
+        }}
+      >
         <div className={st.modal} onClick={(e) => e.stopPropagation()}>
           <div className={st.header}>{title}</div>
           <div className={st.content}>{children}</div>

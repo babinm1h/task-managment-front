@@ -52,8 +52,12 @@
   "createProject.label.name": "Name",
   "createProject.title": "Create Project",
 
-  "calendar.createEvent.title": "Create event",
-  "calendar.createEvent.label.name": "Name",
-  "calendar.createEvent.label.time": "Time",
-  "calendar.event.label.date": "Date"
+  "deleteTask.title": "Delete task?",
+
+  "calendar.createEvent.modal.title": "Create event",
+  "calendar.label.name": "Name",
+  "calendar.label.time": "Time",
+  "calendar.label.date": "Date",
+  "calendar.event.label.date": "Date",
+  "calendar.update.modal.title": "Update Event"
 }

@@ -13,6 +13,7 @@ import ListItem from "../../../../UI/ListItem/ListItem";
 import PopMenu from "../../../../UI/PopMenu/PopMenu";
 import LanguagesMenuItem from "../LanguagesMenuItem/LanguagesMenuItem";
 import st from "../Header.module.scss";
+import { deleteTokenCookie } from "../../../../../../helpers/cookieHelpers";
 
 interface IProps {
   user: IUser | null;
@@ -30,6 +31,7 @@ const UserMenu: FC<IProps> = ({ user, locale, languageMenuState }) => {
   const dispatch = useAppDispatch();
 
   const handleLogout = () => {
+    deleteTokenCookie();
     dispatch(logout());
   };
 

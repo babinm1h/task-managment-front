@@ -6,6 +6,7 @@ import { translate } from "../../../locales/translate";
 import { useLazyGetMyProjectsQuery } from "../../../redux/services/projects/projectsApi";
 import CreateProjectForm from "../forms/CreateProjectForm/CreateProjectForm";
 import Button from "../UI/Button/Button";
+import Loader from "../UI/Loader/Loader";
 import Modal from "../UI/Modal/Modal";
 import ProjectItem from "./ProjectItem/ProjectItem";
 import st from "./Projects.module.scss";
@@ -14,7 +15,7 @@ interface IProps extends WrappedComponentProps {}
 
 const Projects: FC<IProps> = ({ intl }) => {
   const { isOpen, onClose, onOpen } = useModal();
-  const [fetchProjects, { data, isLoading, isFetching }] = useLazyGetMyProjectsQuery();
+  const [fetchProjects, { data, isLoading }] = useLazyGetMyProjectsQuery();
 
   const handleFetchProjects = async () => {
     await fetchProjects();
@@ -24,7 +25,7 @@ const Projects: FC<IProps> = ({ intl }) => {
     handleFetchProjects();
   }, []);
 
-  if (isLoading) return <>load</>;
+  if (isLoading) return <Loader />;
 
   return (
     <>

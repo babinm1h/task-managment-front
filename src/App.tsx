@@ -30,7 +30,6 @@ const App = () => {
       const user = await checkAuth().unwrap();
       dispatch(setAuthData(user));
     } catch (err: any) {
-      notifyError(err.data?.message);
     } finally {
       setIsLoading(false);
     }

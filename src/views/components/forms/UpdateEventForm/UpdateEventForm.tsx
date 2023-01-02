@@ -4,19 +4,22 @@ import { translate } from "../../../../locales/translate";
 import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
 import * as Yup from "yup";
-import st from "./CreateEventForm.module.scss";
+import st from "./UpdateEventForm.module.scss";
 import { VALIDATE_MESSAGES } from "../../../../helpers/validateHelpers";
 import { useFormik } from "formik";
 import Datepicker from "../../UI/Datepicker/Datepicker";
 import { DateHelpers } from "../../../../helpers/dateHelpers";
+import { TUpdateEventArgs } from "../../../../redux/services/events/eventsApi";
 
 interface IProps extends WrappedComponentProps {
-  onSubmit: (name: string, time: string) => void;
+  onSubmit: (args: Omit<TUpdateEventArgs, "id">) => void;
+  name: string;
   time: string;
+  date: string;
 }
 
-const CreateEventForm: FC<IProps> = ({ intl, onSubmit, time }) => {
-  const initialValues = { name: "", time };
+const UpdateEventForm: FC<IProps> = ({ intl, onSubmit, date, name, time }) => {
+  const initialValues = { name, time, date };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -30,8 +33,8 @@ const CreateEventForm: FC<IProps> = ({ intl, onSubmit, time }) => {
     initialValues,
     validationSchema,
     validateOnChange: false,
-    onSubmit: ({ name, time }, formikHelpers) => {
-      onSubmit(name, time);
+    onSubmit: (values, formikHelpers) => {
+      onSubmit(values);
       formikHelpers.setSubmitting(false);
     },
   });
@@ -39,6 +42,11 @@ const CreateEventForm: FC<IProps> = ({ intl, onSubmit, time }) => {
   const handleTimeChange = (date: Date | null) => {
     if (!date) return;
     formik.setFieldValue("time", DateHelpers.format("HH:mm", date));
+  };
+
+  const handleDateChange = (date: Date | null) => {
+    if (!date) return;
+    formik.setFieldValue("date", DateHelpers.getDateObj(date).format("MM DD YY"));
   };
 
   return (
@@ -49,6 +57,7 @@ const CreateEventForm: FC<IProps> = ({ intl, onSubmit, time }) => {
         value={formik.values.name}
         errorMsg={formik.errors.name}
         onChange={formik.handleChange}
+        autoComplete={"off"}
       />
       <Datepicker
         label={intl.formatMessage({ id: "calendar.label.time" })}
@@ -61,12 +70,22 @@ const CreateEventForm: FC<IProps> = ({ intl, onSubmit, time }) => {
         startDate={new Date()}
         showTimeSelectOnly
         errorMsg={formik.errors.time}
+        autoComplete={"off"}
+      />
+      <Datepicker
+        label={intl.formatMessage({ id: "calendar.label.date" })}
+        name="date"
+        value={DateHelpers.getDateObj(formik.values.date).format("DD.MM.YYYY")}
+        onChange={handleDateChange}
+        startDate={new Date()}
+        autoComplete={"off"}
+        errorMsg={formik.errors.date}
       />
       <Button type="submit" disabled={formik.isSubmitting}>
-        {translate({ id: "common.create" })}
+        {translate({ id: "common.update" })}
       </Button>
     </form>
   );
 };
 
-export default injectIntl(CreateEventForm);
+export default injectIntl(UpdateEventForm);

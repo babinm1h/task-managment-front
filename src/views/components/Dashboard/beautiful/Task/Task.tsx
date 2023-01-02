@@ -8,15 +8,16 @@ import { useModal } from "../../../../../hooks/useModal";
 import Modal from "../../../UI/Modal/Modal";
 import { DateHelpers } from "../../../../../helpers/dateHelpers";
 import { translate } from "../../../../../locales/translate";
+import { injectIntl, WrappedComponentProps } from "react-intl";
 
-interface IProps {
+interface IProps extends WrappedComponentProps {
   task: ITask;
   index: number;
   onDelete: (id: string) => void;
   toggleCompleteTask: (id: string, colId: string, completed: boolean) => void;
 }
 
-const Task: FC<IProps> = ({ task, index, onDelete, toggleCompleteTask }) => {
+const Task: FC<IProps> = ({ task, index, onDelete, toggleCompleteTask, intl }) => {
   const { isOpen, onClose, onOpen } = useModal();
 
   const deadline = DateHelpers.formatDate(task.deadline, "DD.MM.YYYY");
@@ -60,7 +61,7 @@ const Task: FC<IProps> = ({ task, index, onDelete, toggleCompleteTask }) => {
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        title="Delete task?"
+        title={intl.formatMessage({ id: "deleteTask.title" })}
         withConfirm
         onConfirm={() => onDelete(task._id)}
       />
@@ -68,4 +69,4 @@ const Task: FC<IProps> = ({ task, index, onDelete, toggleCompleteTask }) => {
   );
 };
 
-export default Task;
+export default injectIntl(Task);

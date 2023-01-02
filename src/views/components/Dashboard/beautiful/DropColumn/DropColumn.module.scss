@@ -26,3 +26,8 @@
     border: 2px dashed transparent;
     flex: 1 1 auto;
 }
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+    }
+}

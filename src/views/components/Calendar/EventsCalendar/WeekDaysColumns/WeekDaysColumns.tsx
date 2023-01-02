@@ -1,7 +1,7 @@
 import { Dayjs } from "dayjs";
 import React, { FC } from "react";
 import { DateHelpers } from "../../../../../helpers/dateHelpers";
-import { TCreateEventArgs } from "../../../../../redux/services/events/eventsApi";
+import { TCreateEventArgs, TUpdateEventArgs } from "../../../../../redux/services/events/eventsApi";
 import { IEvent } from "../../../../../types/entities.types";
 import WeekDayColumn from "./WeekDayColumn";
 import st from "./WeekDaysColumns.module.scss";
@@ -13,6 +13,7 @@ interface IProps {
   events: IEvent[];
   onDeleteEvent: (id: string) => void;
   onCreateEvent: (ev: TCreateEventArgs) => void;
+  onUpdateEvent: (dto: TUpdateEventArgs) => void;
 }
 
 const secsInDay = 86400;
@@ -24,6 +25,7 @@ const WeekDaysColumns: FC<IProps> = ({
   events,
   onCreateEvent,
   onDeleteEvent,
+  onUpdateEvent,
 }) => {
   const linePos = (DateHelpers.hoursToSeconds(hoursNow) / secsInDay) * 100;
 
@@ -43,6 +45,7 @@ const WeekDaysColumns: FC<IProps> = ({
             events={dayEvents}
             onCreateEvent={onCreateEvent}
             onDeleteEvent={onDeleteEvent}
+            onUpdateEvent={onUpdateEvent}
           />
         );
       })}

@@ -5,6 +5,8 @@ const withTags = apiSlice.enhanceEndpoints({ addTagTypes: [] });
 
 export type TCreateEventArgs = Pick<IEvent, "date" | "name" | "time">;
 
+export type TUpdateEventArgs = Partial<Pick<IEvent, "date" | "name" | "time">> & { id: string };
+
 export const eventsApi = withTags.injectEndpoints({
   endpoints: (builder) => ({
     createEvent: builder.mutation<IEvent, TCreateEventArgs>({
@@ -22,9 +24,9 @@ export const eventsApi = withTags.injectEndpoints({
       }),
     }),
 
-    updateEvent: builder.mutation<IEvent, any>({
-      query: (payload) => ({
-        url: `/events/update/`,
+    updateEvent: builder.mutation<IEvent, TUpdateEventArgs>({
+      query: ({ id, ...payload }) => ({
+        url: `/events/update/${id}`,
         method: "PUT",
         body: payload,
       }),

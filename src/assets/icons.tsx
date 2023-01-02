@@ -10,6 +10,7 @@ import { FaTrash, FaTasks } from "react-icons/fa";
 import { AiFillFire } from "react-icons/ai";
 import { IoMdAdd } from "react-icons/io";
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
+import { MdEdit } from "react-icons/md";
 
 export {
   BsFillMoonStarsFill as MoonIcon,
@@ -24,4 +25,5 @@ export {
   GoChevronLeft as ArrowLeftIcon,
   GoChevronRight as ArrowRightIcon,
   BsCalendarDate as CalendarIcon,
+  MdEdit as EditIcon,
 };
