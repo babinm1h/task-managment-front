@@ -47,9 +47,6 @@ const UserMenu: FC<IProps> = ({ user, locale, languageMenuState }) => {
             offset={[0, 7]}
           >
             <ul className={st.menu}>
-              <ListItem className={st.theme}>
-                <ThemeSwitch />
-              </ListItem>
               <ListItem ref={languageMenuState.ref} className={st.mobileLang}>
                 <LanguagesMenuItem
                   currentLocale={locale}
@@ -61,6 +58,9 @@ const UserMenu: FC<IProps> = ({ user, locale, languageMenuState }) => {
                 <ListItem>{translate({ id: "header.calendar" })}</ListItem>
               </NavLink>
               <ListItem onClick={handleLogout}>{translate({ id: "auth.logout" })}</ListItem>
+              <ListItem className={st.theme}>
+                <ThemeSwitch />
+              </ListItem>
             </ul>
           </PopMenu>
         </div>

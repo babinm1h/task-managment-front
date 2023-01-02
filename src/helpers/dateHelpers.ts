@@ -79,6 +79,10 @@ export class DateHelpers {
     return week;
   }
 
+  static getWeekDay(currentDay: Date) {
+    return weekDays[dayjs(currentDay).locale("ru").weekday()];
+  }
+
   static hoursToSeconds(hours: string) {
     const spl = hours.split(":");
     return +spl[0] * 60 * 60 + +spl[1] * 60;
