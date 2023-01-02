@@ -1,0 +1,13 @@
+.listItem {
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+    &:hover {
+        background-color: var(--onSurfaceBgHover);
+    }
+    &.active {
+        background-color: var(--onSurfaceBgHover);
+    }
+}

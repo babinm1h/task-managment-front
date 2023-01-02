@@ -1,0 +1,25 @@
+.tooltip {
+    border-radius: 4px;
+    background-color: var(--onSurfaceBg);
+    z-index: 111;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    min-width: 50px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: var(--mdShadow);
+    min-width: 120px;
+    color: var(--primaryText);
+    &_opened {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.trigger {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}

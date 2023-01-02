@@ -1,0 +1,24 @@
+.input {
+    width: 100%;
+    border: 1px solid var(--primaryBg);
+    padding: 10px 12px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: currentColor;
+    display: flex;
+    &.error {
+        border-color: red;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.label {
+    font-size: 80%;
+    &.error {
+        color: red;
+    }
+}

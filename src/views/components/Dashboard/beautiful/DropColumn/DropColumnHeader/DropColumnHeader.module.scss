@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    h3 {
+        font-weight: bold;
+        text-align: start;
+        font-size: 18px;
+        text-transform: capitalize;
+        padding: 0 10px;
+        width: 100%;
+    }
+    .menuWrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+            &:hover {
+                background-color: var(--onSurfaceBgHover);
+            }
+        }
+    }
+}

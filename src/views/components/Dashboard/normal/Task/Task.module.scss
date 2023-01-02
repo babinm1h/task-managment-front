@@ -1,0 +1,15 @@
+.item {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--onSurfaceBg);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    cursor: grab;
+    box-shadow: var(--lightGrayShadow);
+}
+.text {
+    display: inline-flex;
+    align-items: center;
+    word-break: break-all;
+}

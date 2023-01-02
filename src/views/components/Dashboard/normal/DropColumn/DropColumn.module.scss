@@ -1,0 +1,42 @@
+.wrapper {
+    box-shadow: var(--lightGrayShadow);
+    min-width: 300px;
+    min-height: 150px;
+    background-color: var(--surfaceBg);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5px;
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    align-self: flex-start;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    padding: 10px 10px;
+    border: 2px dashed transparent;
+    flex: 1 1 auto;
+}
+.isOver {
+    border: 2px dashed rgb(56 189 248);
+}
+.footer {
+    padding: 5px 10px;
+    button {
+        background-color: var(--lightBlue);
+        border-radius: 4px;
+        padding: 6px 12px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: var(--lightBlueHover);
+        }
+    }
+}

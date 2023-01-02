@@ -1,0 +1,95 @@
+.header {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--headerBg);
+    box-shadow: var(--smShadow);
+    justify-content: space-between;
+    color: #fff;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .navItem {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        background-color: var(--onHeaderBg);
+        padding: 5px 15px;
+        border-radius: 4px;
+        svg {
+            color: currentColor;
+            width: 18px;
+            height: 18px;
+        }
+        &.navCalendar {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    .theme {
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+}
+
+.menuWrapper {
+    position: relative;
+    .menu {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    .mobileLang {
+        display: none;
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .lang {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            fill: #fff;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    .userName {
+        overflow: hidden;
+        max-width: 95px;
+        text-overflow: ellipsis;
+    }
+    .theme {
+        display: none;
+        @media (max-width: 500px) {
+            display: block;
+        }
+    }
+    .navCalendar {
+        display: none;
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+}

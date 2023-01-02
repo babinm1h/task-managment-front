@@ -1,0 +1,28 @@
+.wrapper {
+    box-shadow: var(--mdShadow);
+    min-width: 300px;
+    min-height: 150px;
+    background-color: var(--surfaceBg);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.isOver {
+    border: 2px dashed var(--primaryBg);
+}
+.footer {
+    padding: 5px 10px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    padding: 10px 10px;
+    border: 2px dashed transparent;
+    flex: 1 1 auto;
+}

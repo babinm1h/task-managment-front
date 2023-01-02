@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--surfaceBg);
+    box-shadow: var(--mdShadow);
+    position: relative;
+    .header {
+        border-bottom: 1px solid var(--lightGray);
+        width: 100%;
+        .weekDays {
+            display: flex;
+            align-items: center;
+            .weekDay {
+                flex: 1;
+                padding: 15px 10px;
+                font-size: 14px;
+                border-left: 1px solid var(--lightGray);
+                display: flex;
+                line-height: 1;
+                .dayNum {
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .empty {
+            width: 56px;
+            height: 100%;
+        }
+    }
+    .body {
+        font-size: 0.75rem;
+        overflow-y: auto;
+        display: flex;
+        width: 100%;
+        max-height: 100%;
+        .hoursCol {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            .hour {
+                display: flex;
+                justify-content: center;
+                height: 60px;
+                width: 56px;
+            }
+        }
+    }
+}

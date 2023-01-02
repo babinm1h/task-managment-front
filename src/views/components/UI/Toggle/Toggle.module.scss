@@ -1,0 +1,38 @@
+.toggle {
+    width: 36px;
+    height: 14px;
+    position: relative;
+    cursor: pointer;
+}
+.track {
+    background-color: var(--gray);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 999px;
+    transition: all 0.25s ease-in-out;
+}
+.thumb {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: var(--smShadow);
+    top: 50%;
+    transform: translateY(-50%);
+    left: -6px;
+    transition: all 0.25s ease-in-out;
+}
+.input:checked {
+    ~ .thumb {
+        left: 20px;
+        background-color: var(--primaryBg);
+    }
+    ~ .track {
+        background-color: var(--primaryLightBg);
+    }
+}

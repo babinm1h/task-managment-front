@@ -1,0 +1,59 @@
+{
+  "errors.required": "Обязательное поле",
+  "errors.max.length": "Максимальная длина {num} символа",
+  "errors.min.length": "Минимальная длина {num} символа",
+  "errors.email": "Неправильный формат email",
+
+  "common.confirm": "Подтвердить",
+  "common.delete": "Удалить",
+  "common.update": "Обновить",
+  "common.edit": "Редактировать",
+  "common.emptyList": "Список пуст...",
+  "common.create": "Создать",
+  "common.changeLanguage": "Изменить язык",
+  "common.until": "До",
+
+  "days.monday": "Пн",
+  "days.tuesday": "Вт",
+  "days.wednesday": "Ср",
+  "days.thursday": "Чт",
+  "days.friday": "Пт",
+  "days.saturday": "Сб",
+  "days.sunday": "Вс",
+
+  "auth.logout": "Выйти",
+  "auth.login": "Войти",
+  "auth.signUp": "Зарегистрироваться",
+  "auth.signUp.hint": "Уже есть аккаунт? ",
+  "auth.login.hint": "Нет аккаунта? ",
+  "auth.password": "Пароль",
+
+  "projects.create": "Создать",
+  "projects.create.column": "Создать колонку",
+  "projects.delete.column": "Удалить колонку?",
+  "projects.create.task": "Создать задачу",
+  "projects.tasks": "Задачи",
+  "projects.edit.column": "Редактирование колонки",
+
+  "project.chart.expired.title": "Просрочены",
+  "project.chart.progress.title": "В работе",
+  "project.chart.completed.title": "Выполнены",
+
+  "header.boards": "Доски задач",
+  "header.calendar": "Календарь",
+
+  "createColumn.label.name": "Название",
+
+  "editColumn.label.name": "Название",
+
+  "createTask.description": "Описание",
+  "createTask.until": "Крайний срок",
+
+  "createProject.label.name": "Название",
+  "createProject.title": "Создать проект",
+
+  "calendar.createEvent.title": "Добавить событие",
+  "calendar.createEvent.label.name": "Название",
+  "calendar.createEvent.label.time": "Время",
+  "calendar.event.label.date": "Дата"
+}

@@ -1,0 +1,48 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: flex-start;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .currMonth {
+            font-weight: 500;
+        }
+    }
+    .weekRow {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        .weekDay {
+            width: 26px;
+            height: 20px;
+            font-size: 0.7rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .day {
+        width: 26px;
+        height: 26px;
+        font-size: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        &.disabled {
+            color: var(--lightGray);
+        }
+        &.active {
+            background-color: var(--primaryBg);
+            color: #fff;
+        }
+        &:not(&.active):hover {
+            background-color: var(--surfaceBgHover);
+        }
+    }
+}

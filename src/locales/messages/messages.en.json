@@ -1,0 +1,59 @@
+{
+  "errors.required": "Field Required",
+  "errors.max.length": "Max length is {num} symbols",
+  "errors.min.length": "Minimal length is {num} symbols",
+  "errors.email": "Wrong email format",
+
+  "common.until": "Until",
+  "common.confirm": "Confirm",
+  "common.delete": "Delete",
+  "common.update": "Update",
+  "common.edit": "Edit",
+  "common.emptyList": "List is empty...",
+  "common.create": "Create",
+  "common.changeLanguage": "Change language",
+
+  "days.monday": "Mon",
+  "days.tuesday": "Tue",
+  "days.wednesday": "Wed",
+  "days.thursday": "Thu",
+  "days.friday": "Fri",
+  "days.saturday": "Sat",
+  "days.sunday": "Sun",
+
+  "auth.logout": "Logout",
+  "auth.login": "Login",
+  "auth.signUp": "Sign Up",
+  "auth.signUp.hint": "Already have an account? ",
+  "auth.login.hint": "Dont have an account? ",
+  "auth.password": "Password",
+
+  "projects.create": "Create new",
+  "projects.create.column": "Create Column",
+  "projects.delete.column": "Delete this column?",
+  "projects.edit.column": "Edit column",
+  "projects.tasks": "Tasks",
+  "projects.create.task": "Create Task",
+
+  "project.chart.expired.title": "Expired",
+  "project.chart.progress.title": "In Progress",
+  "project.chart.completed.title": "Completed",
+
+  "header.boards": "Boards",
+  "header.calendar": "Calendar",
+
+  "createColumn.label.name": "Name",
+
+  "editColumn.label.name": "Name",
+
+  "createTask.description": "Description",
+  "createTask.until": "Until",
+
+  "createProject.label.name": "Name",
+  "createProject.title": "Create Project",
+
+  "calendar.createEvent.title": "Create event",
+  "calendar.createEvent.label.name": "Name",
+  "calendar.createEvent.label.time": "Time",
+  "calendar.event.label.date": "Date"
+}

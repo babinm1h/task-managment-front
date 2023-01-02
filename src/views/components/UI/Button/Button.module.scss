@@ -1,0 +1,28 @@
+.button {
+    background-color: var(--primaryBg);
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: all 0.2s ease-in-out;
+    color: var(--onPrimaryText);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: var(--smShadow);
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    &:hover {
+        background-color: var(--primaryBgHover);
+    }
+    &:active {
+        background-color: var(--primaryBgActive);
+        box-shadow: var(--mdShadow);
+    }
+    svg {
+        color: var(--onPrimaryText);
+    }
+}
+.full {
+    width: 100%;
+}

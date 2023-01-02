@@ -1,0 +1,63 @@
+:root[data-theme="dark"] {
+    --successColor: #36c33d;
+    --errorColor: #d32f2f;
+    --infoBg: #0288d1;
+
+    --pageBg: #181818;
+    --primaryText: #fff;
+
+    --surfaceBg: #292929;
+    --surfaceBgHover: #303030;
+    --onSurfaceBg: #393939;
+    --onSurfaceBgHover: #646464;
+
+    --primaryLightBg: #6200ee;
+    --primaryBg: #bb86fc;
+    --primaryBgHover: #c190fc;
+    --primaryBgActive: #caa2fc;
+    --onPrimaryText: #3700b3;
+    --gray: #999;
+    --lightGray: rgba(255, 255, 255, 0.3);
+
+    --smShadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --mdShadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    --headerBg: #292929;
+    --onHeaderBg: #393939;
+
+    --iconColor: #fff;
+}
+
+:root {
+    --successColor: #36c33d;
+    --errorColor: #d32f2f;
+    --infoBg: #0288d1;
+
+    --pageBg: #fff;
+    --primaryText: #000;
+
+    --surfaceBg: #fff;
+    --surfaceBgHover: rgba(0, 0, 0, 0.1);
+    --onSurfaceBg: #fff;
+    --onSurfaceBgHover: #d8d8d8;
+
+    --primaryLightBg: #bb86fc;
+    --primaryBg: #6200ee;
+    --primaryBgHover: #5500cd;
+    --primaryBgActive: #4a00b2;
+    --onPrimaryText: #fff;
+    --gray: #999;
+    --lightGray: rgba(0, 0, 0, 0.37);
+
+    --smShadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 3px 0px rgba(0, 0, 0, 0.18),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    --mdShadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 2px rgba(0, 0, 0, 0.14),
+        0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+    --headerBg: #6200ee;
+    --onHeaderBg: #ac68ff;
+    --iconColor: #393939;
+}
