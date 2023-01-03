@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import DashboardPage from "../../pages/DashboardPage/DashboardPage";
 import LoginPage from "../../pages/LoginPage/LoginPage";
 import ProjectsPage from "../../pages/ProjectsPage/ProjectsPage";
@@ -28,6 +28,7 @@ const AppRoutes = () => {
       </Route>
       <Route path={APP_ROUTES.login} element={<LoginPage />} />
       <Route path={APP_ROUTES.signup} element={<RegisrationPage />} />
+      <Route path={"/*"} element={<Navigate to={APP_ROUTES.main} />} />
     </Routes>
   );
 };
