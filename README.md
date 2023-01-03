@@ -5,3 +5,7 @@ Drag and drop boards
 
 Events calendar
 ![image](https://user-images.githubusercontent.com/94064986/210304237-d7aee1c1-4261-41af-b47f-3fb6752c6df5.png)
+
+Dark / Ligth theme
+![image](https://user-images.githubusercontent.com/94064986/210304495-b0e3f8b2-2802-47a8-901e-74df1eb40f6c.png)
+
